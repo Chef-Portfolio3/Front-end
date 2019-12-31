@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 
 
 export const LoginPage = () => {
-    const [user, setUser] = useState({email:'', password:''});
+    const [user, setUser] = useState({username:'', password:''});
    
     const handleChange = (e) => {
        
@@ -21,16 +21,16 @@ export const LoginPage = () => {
         <>
             <h3>Enter email and password</h3>
             <form>
-                <label>
-                    Email:
+                <label htmlFor='username'>
+                    USERNAME:
                     <input 
-                        type="email" 
-                        name="email"
+                        type="username" 
+                        name="username"
                         onChange={handleChange}
                     />
                 </label>
-                <label>
-                    Password:
+                <label htmlFor='password'>
+                    PASSWORD:
                     <input 
                         type="password" 
                         name="password" 
